@@ -12,7 +12,7 @@ function PlayDetail() {
     formation: 'Shotgun',
     personnel: '11 Personnel (1 RB, 1 TE)',
     description: 'A zone blocking concept that creates horizontal movement and gives the running back multiple cutback options based on defensive flow.',
-    diagram: '/path/to/atlanta-falcons-diagram.jpg', // Updated to use the attached diagram for Atlanta/Falcons
+    diagram: '/images/atlanta-falcons-diagram.jpg', // Updated path to point to the `public/images` directory
   };
 
   return (
