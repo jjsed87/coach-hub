@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import './PlayDetail.css';
 
 function PlayDetail() {
-  const [activeTab, setActiveTab] = useState('Diagram B');
   const navigate = useNavigate();
 
   const playDetails = {
@@ -13,12 +12,7 @@ function PlayDetail() {
     formation: 'Shotgun',
     personnel: '11 Personnel (1 RB, 1 TE)',
     description: 'A zone blocking concept that creates horizontal movement and gives the running back multiple cutback options based on defensive flow.',
-    diagrams: {
-      'Diagram A': '/path/to/diagram-a.jpg',
-      'Diagram B': '/path/to/diagram-b.jpg',
-      'Diagram C': '/path/to/diagram-c.jpg',
-      'Diagram D': '/path/to/diagram-d.jpg',
-    },
+    diagram: '/path/to/inside-zone-diagram.jpg',
   };
 
   return (
@@ -29,20 +23,9 @@ function PlayDetail() {
       </header>
       <div className="play-detail-content">
         <div className="main-content">
-          <div className="tabs">
-            {Object.keys(playDetails.diagrams).map((tab) => (
-              <button
-                key={tab}
-                className={activeTab === tab ? 'active' : ''}
-                onClick={() => setActiveTab(tab)}
-              >
-                {tab}
-              </button>
-            ))}
-          </div>
           <img
-            src={playDetails.diagrams[activeTab]}
-            alt={activeTab}
+            src={playDetails.diagram}
+            alt="Play Diagram"
             className="diagram-image"
           />
         </div>
