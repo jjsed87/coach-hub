@@ -22,7 +22,7 @@ function PlayDetail() {
   return (
     <div className="play-detail">
       <header className="play-detail-header">
-        <button className="back-button">Back</button>
+        <button className="back-button" onClick={() => navigate(-1)}>Back</button>
         <h1>{playDetails.name}</h1>
       </header>
       <div className="play-detail-content">
