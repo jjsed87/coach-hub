@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './PlayDetail.css';
 
 function PlayDetail() {
   const [activeTab, setActiveTab] = useState('Diagram B');
+  const navigate = useNavigate();
 
   const playDetails = {
     name: 'LA / RAMS',
