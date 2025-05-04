@@ -6,6 +6,7 @@ import RecentPlays from './components/RecentPlays';
 import RunPlays from './components/RunPlays';
 import PassProtection from './components/PassProtection';
 import ScreenPlays from './components/ScreenPlays';
+import PlayDetail from './components/PlayDetail';
 import './App.css';
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
           <Route path="/run-plays" element={<RunPlays />} />
           <Route path="/pass-protection" element={<PassProtection />} />
           <Route path="/screen-plays" element={<ScreenPlays />} />
+          <Route path="/play-detail" element={<PlayDetail />} />
         </Routes>
       </main>
     </div>
