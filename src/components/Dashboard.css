@@ -1,0 +1,44 @@
+/* Dashboard styles */
+.dashboard {
+  padding: 2rem;
+  background-color: #f4f4f4;
+}
+
+.dashboard h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4b0082; /* Purple theme */
+}
+
+.dashboard-cards {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  color: #4b0082;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.card span {
+  font-size: 0.9rem;
+  color: #777;
+}

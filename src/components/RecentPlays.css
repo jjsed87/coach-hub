@@ -1,0 +1,59 @@
+/* Recent Plays styles */
+#recent-plays {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+#recent-plays h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #4b0082; /* Purple theme */
+}
+
+.recent-plays {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-around;
+}
+
+.play-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  text-align: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+.play-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.play-card h3 {
+  font-size: 1.25rem;
+  color: #4b0082;
+  margin-bottom: 0.5rem;
+}
+
+.play-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.play-card button {
+  background-color: #4b0082;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.play-card button:hover {
+  background-color: #dda0dd; /* Light purple */
+}
