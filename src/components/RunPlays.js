@@ -11,12 +11,10 @@ function RunPlays() {
       <div className="play" onClick={() => navigate('/play-detail')}>
         <h3>Atlanta/Falcons</h3>
         <img src="/Falcons.jpg" alt="Atlanta/Falcons Diagram" />
-        <img src="/Black.png" alt="Black Diagram" />
       </div>
       <div className="play" onClick={() => navigate('/play-detail')}>
         <h3>Mid Zone Run</h3>
         <img src="/Zone.png" alt="Mid Zone Run Diagram" />
-        <img src="/Purple.jpg" alt="Purple Diagram" />
       </div>
     </section>
   );
