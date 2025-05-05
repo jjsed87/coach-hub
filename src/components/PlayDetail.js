@@ -15,6 +15,7 @@ function PlayDetail() {
       personnel: '21 Personnel (2 RB, 1 TE)',
       description: 'Power run with backside guard pull. Identify Mike LB, PST hinges on Wall-Street call, center covers backside gaps.',
       diagram: '/Falcons.jpg',
+      pdf: '/Atlanta_Faclons (1).pdf',
       rules: [
         'Play-side OL downblock backside gap or double-team.',
         'Backside Guard pulls to kick out edge defender.',
@@ -29,6 +30,7 @@ function PlayDetail() {
       personnel: '11 Personnel (1 RB, 1 TE)',
       description: 'Zone blocking with lateral flow and mid zone aiming point. RB reads blocks for cutback.',
       diagram: '/Zone.png',
+      pdf: '/Minnesota Viking.pdf',
       rules: [
         'Block your assigned gap; stay square.',
         'Use backside hand on defender’s breastplate.',
@@ -64,6 +66,26 @@ function PlayDetail() {
       ],
       rulesDiagram: '/PPrules.jpg',
     },
+    black: {
+      name: 'Black (Slide Left)',
+      category: 'Pass',
+      scheme: '6-Man Protection',
+      formation: 'N/A',
+      personnel: '5 OL + QB',
+      description: 'Slide left protection scheme for passing plays.',
+      diagram: '/Black.png',
+      pdf: '/Black_Purple (6 -man pro).pdf',
+    },
+    purple: {
+      name: 'Purple (Slide Right)',
+      category: 'Pass',
+      scheme: '6-Man Protection',
+      formation: 'N/A',
+      personnel: '5 OL + QB',
+      description: 'Slide right protection scheme for passing plays.',
+      diagram: '/Purple.jpg',
+      pdf: '/Black_Purple (6 -man pro).pdf',
+    },
   };
 
   const play = detailsMap[playId] || detailsMap.falcons;
@@ -98,6 +120,23 @@ function PlayDetail() {
               ))}
             </ul>
           </div>
+          {play.pdf && (
+            <div className="pdf-viewer">
+              <object
+                data={play.pdf}
+                type="application/pdf"
+                width="100%"
+                height="400px"
+              >
+                <p>
+                  Your browser does not support embedded PDFs. <br />
+                  <a href={play.pdf} target="_blank" rel="noopener noreferrer">
+                    Download the PDF installation sheet
+                  </a>.
+                </p>
+              </object>
+            </div>
+          )}
         </div>
         <aside className="sidebar">
           <h2>Play Details</h2>
