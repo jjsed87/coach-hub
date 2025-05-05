@@ -1,35 +1,40 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 import './RecentPlays.css';
 
 function RecentPlays() {
-  const navigate = useNavigate();
+  const videos = [
+    {
+      title: 'Zone Blocking Execution',
+      url: 'https://www.youtube.com/embed/example1',
+    },
+    {
+      title: 'Pass Protection Techniques',
+      url: 'https://www.youtube.com/embed/example2',
+    },
+    {
+      title: 'Run Play Strategies',
+      url: 'https://www.youtube.com/embed/example3',
+    },
+  ];
 
   return (
     <section id="recent-plays">
-      <h2>Recent Plays</h2>
-      <div className="recent-plays">
-        <div className="play-card" onClick={() => navigate('/play-detail')}>
-          <img src="/path/to/image1.jpg" alt="Play 1" />
-          <h3>Power Right</h3>
-          <p>Category: Run</p>
-          <p>Formation: I-Formation</p>
-          <button onClick={() => navigate('/play-detail')}>View</button>
-        </div>
-        <div className="play-card" onClick={() => navigate('/play-detail')}>
-          <img src="/path/to/image2.jpg" alt="Play 2" />
-          <h3>Zone Left</h3>
-          <p>Category: Run</p>
-          <p>Formation: Shotgun</p>
-          <button onClick={() => navigate('/play-detail')}>View</button>
-        </div>
-        <div className="play-card" onClick={() => navigate('/play-detail')}>
-          <img src="/path/to/image3.jpg" alt="Play 3" />
-          <h3>Atlanta/Falcons</h3>
-          <p>Category: Run</p>
-          <p>Formation: Various</p>
-          <button onClick={() => navigate('/play-detail')}>View</button>
-        </div>
+      <h2>Film Study</h2>
+      <div className="video-list">
+        {videos.map((video, index) => (
+          <div key={index} className="video-item">
+            <iframe
+              width="560"
+              height="315"
+              src={video.url}
+              title={video.title}
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+            <h3>{video.title}</h3>
+          </div>
+        ))}
       </div>
     </section>
   );
