@@ -6,14 +6,23 @@ function PlayDetail() {
   const navigate = useNavigate();
 
   const playDetails = {
-    name: 'LA / RAMS',
+    name: 'Atlanta/Falcons',
     category: 'Run',
-    scheme: 'Inside Zone (Zone Scheme)',
-    formation: 'Shotgun',
-    personnel: '11 Personnel (1 RB, 1 TE)',
-    description: 'A zone blocking concept that creates horizontal movement and gives the running back multiple cutback options based on defensive flow.',
-    diagram: '/Black.png', // Added Black diagram for play detail
+    scheme: 'Counter (Backside Guard & Tackle/Wing Pull)',
+    formation: 'I-Formation',
+    personnel: '21 Personnel (2 RB, 1 TE)',
+    description: 'A power run play with backside pulling linemen to create running lanes.',
+    diagram: '/Falcons.jpg', // Correct diagram for Atlanta/Falcons
   };
+
+  if (window.location.pathname.includes('zone')) {
+    playDetails.name = 'Mid Zone Run';
+    playDetails.scheme = 'Zone Blocking – Mid Zone Read';
+    playDetails.formation = 'Shotgun';
+    playDetails.personnel = '11 Personnel (1 RB, 1 TE)';
+    playDetails.description = 'A zone blocking concept with a mid-zone aiming point for the RB.';
+    playDetails.diagram = '/Zone.png'; // Correct diagram for Mid Zone Run
+  }
 
   return (
     <div className="play-detail">
