@@ -75,6 +75,9 @@ function PlayDetail() {
       description: 'Slide left protection scheme for passing plays.',
       diagram: '/Black.png',
       pdf: '/Black_Purple (6 -man pro).pdf',
+      rules: [
+        'OL slide left on call, blocking flow.'  /* placeholder rule */
+      ],
     },
     purple: {
       name: 'Purple (Slide Right)',
@@ -85,6 +88,9 @@ function PlayDetail() {
       description: 'Slide right protection scheme for passing plays.',
       diagram: '/Purple.jpg',
       pdf: '/Black_Purple (6 -man pro).pdf',
+      rules: [
+        'OL slide right on call, blocking flow.'  /* placeholder rule */
+      ],
     },
   };
 
