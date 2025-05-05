@@ -3,18 +3,9 @@ import './RecentPlays.css';
 
 function RecentPlays() {
   const videos = [
-    {
-      title: 'Zone Blocking Execution',
-      url: 'https://www.youtube.com/embed/example1',
-    },
-    {
-      title: 'Pass Protection Techniques',
-      url: 'https://www.youtube.com/embed/example2',
-    },
-    {
-      title: 'Run Play Strategies',
-      url: 'https://www.youtube.com/embed/example3',
-    },
+    { title: 'Zone Blocking Execution', url: 'https://www.youtube.com/embed/zThTRYz5jXI' },
+    { title: 'Pass Protection Techniques', url: 'https://www.youtube.com/embed/NnRR6K-xt9k' },
+    { title: 'Run Play Strategies', url: 'https://www.youtube.com/embed/jbpw_nIr6KU' },
   ];
 
   // Added a motivational pop-up for non-negotiables
