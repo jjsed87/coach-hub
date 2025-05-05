@@ -10,8 +10,10 @@ function Header() {
       <h1 onClick={() => navigate('/')}>Gridiron Playbook Pro</h1>
       <nav>
         <button onClick={() => navigate('/')} className="link-button">Home</button>
-        <button onClick={() => navigate('/run-plays')} className="link-button">Playbook</button>
+        <button onClick={() => navigate('/playbook')} className="link-button">Playbook</button>
         <button onClick={() => navigate('/recent-plays')} className="link-button">Film</button>
+        <button onClick={() => navigate('/standards')} className="link-button">Standards</button>
+        <button onClick={() => navigate('/formations')} className="link-button">Formations</button>
         <button onClick={() => navigate('/notes')} className="link-button">Notes</button>
       </nav>
       <input type="text" placeholder="Search plays..." className="search-bar" />
