@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, NavLink } from 'react-router-dom';
 import './Header.css';
 
 function Header() {
@@ -9,8 +9,8 @@ function Header() {
     <header className="header">
       <h1 onClick={() => navigate('/')}>Gridiron Playbook Pro</h1>
       <nav>
-        <button onClick={() => navigate('/')} className="link-button">Home</button>
-        <button onClick={() => navigate('/playbook')} className="link-button">Playbook</button>
+        <NavLink to="/" className="link-button">Home</NavLink>
+        <NavLink to="/playbook" className="link-button">Playbook</NavLink>
         <button onClick={() => navigate('/recent-plays')} className="link-button">Film</button>
         <button onClick={() => navigate('/standards')} className="link-button">Standards</button>
         <button onClick={() => navigate('/formations')} className="link-button">Formations</button>

@@ -8,6 +8,7 @@ function RunPlays() {
   return (
     <section className="run-plays">
       <h2>Run Plays</h2>
+      <p style={{ color: 'red' }}>Debug: RunPlays component loaded</p>
       <div className="play" onClick={() => navigate('/play-detail/falcons')}>
         <h3>Atlanta/Falcons</h3>
         <img src="/Falcons.jpg" alt="Atlanta/Falcons Diagram" />
