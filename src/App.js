@@ -8,6 +8,7 @@ import PassProtection from './components/PassProtection';
 import ScreenPlays from './components/ScreenPlays';
 import PlayDetail from './components/PlayDetail';
 import Formations from './components/Formations';
+import Standards from './components/Standards';
 import './App.css';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
           <Route path="/pass-protection" element={<PassProtection />} />
           <Route path="/screen-plays" element={<ScreenPlays />} />
           <Route path="/recent-plays" element={<RecentPlays />} />
+          <Route path="/standards" element={<Standards />} />
           <Route path="/formations" element={<Formations />} />
           <Route path="/play-detail/:playId" element={<PlayDetail />} />
         </Routes>
