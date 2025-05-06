@@ -1,29 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './RunPlays.css';
+import AddPlay from './AddPlay';
 
 function RunPlays() {
   const navigate = useNavigate();
+  // initial built-in run plays
+  const initialPlays = [
+    { id: 'falcons', name: 'Atlanta/Falcons', diagram: '/Falcons.jpg' },
+    { id: 'zone', name: 'Mid Zone Run', diagram: '/Zone.png' },
+    { id: 'power', name: 'Power', diagram: '/Power.jpg' },
+    { id: 'pin-pull', name: 'Pin & Pull', diagram: '/Pinpull.jpg' },
+  ];
+  const [plays, setPlays] = useState(initialPlays);
+  const handleAdd = (play) => setPlays([...plays, play]);
 
   return (
     <section className="run-plays">
       <h2>Run Plays</h2>
-      <p style={{ color: 'red' }}>Debug: RunPlays component loaded</p>
-      <div className="play" onClick={() => navigate('/play-detail/falcons')}>
-        <h3>Atlanta/Falcons</h3>
-        <img src="/Falcons.jpg" alt="Atlanta/Falcons Diagram" />
-      </div>
-      <div className="play" onClick={() => navigate('/play-detail/zone')}>
-        <h3>Mid Zone Run</h3>
-        <img src="/Zone.png" alt="Mid Zone Run Diagram" />
-      </div>
-      <div className="play" onClick={() => navigate('/play-detail/power')}>
-        <h3>Power</h3>
-        <img src="/Power.jpg" alt="Power Run Diagram" />
-      </div>
-      <div className="play" onClick={() => navigate('/play-detail/pin-pull')}>
-        <h3>Pin & Pull</h3>
-        <img src="/Pinpull.jpg" alt="Pin & Pull Diagram" />
+      <div className="play-grid">
+        {plays.map(play => (
+          <div key={play.id} className="play" onClick={() => navigate(`/play-detail/${play.id}`)}>
+            <h3>{play.name}</h3>
+            <img src={play.diagram} alt={`${play.name} Diagram`} />
+          </div>
+        ))}
+        <AddPlay onAdd={handleAdd} />
       </div>
     </section>
   );

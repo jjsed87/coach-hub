@@ -20,11 +20,6 @@ function Dashboard() {
           <p>Protection schemes for passing plays</p>
           <span>12 plays</span>
         </div>
-        <div className="card" onClick={() => navigate('/screen-plays')}>
-          <h3>Screen Plays</h3>
-          <p>RB, WR, and TE screen concepts</p>
-          <span>8 plays</span>
-        </div>
       </div>
       <Quiz />
     </section>

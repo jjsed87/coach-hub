@@ -25,7 +25,6 @@ function Header() {
         <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>
           {darkMode ? '☀️' : '🌙'}
         </button>
-        <input type="text" placeholder="Search plays..." className="search-bar" />
       </div>
     </header>
   );
