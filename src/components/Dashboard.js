@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Dashboard.css';
 import Quiz from './Quiz';
+import frontLogo from './Frontpagelogo.png';
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ function Dashboard() {
         </div>
         <div className="logo-card">
           <img
-            src="/FrontPageLogo.jpg"
+            src={frontLogo}
             alt="Gridiron Logo"
             className="frontpage-logo"
           />
