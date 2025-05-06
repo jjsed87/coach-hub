@@ -1,70 +1,81 @@
-# Getting Started with Create React App
+# Gridiron Playbook Pro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+An interactive playbook application designed for offensive line coaches and players. Gridiron Playbook Pro centralizes run plays, pass protection schemes, and team standards; integrates film study; and allows adding custom plays in real time.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Dashboard**: Quick access to Run Plays and Pass Protection sections with a branded logo.
+- **Run Plays**: View built-in plays (Falcons, Zone, Power, Pin & Pull), add your own with diagram URLs, and navigate to detailed breakdowns.
+- **Pass Protection**: Explore Black (Slide Left) and Purple (Slide Right) protections, each with embedded PDF installation sheets.
+- **Film Study**: Embedded YouTube videos covering zone blocking execution, pass protection techniques, and run play strategies.
+- **Standards**: Stylish card-based display of non-negotiable team rules and best practices.
+- **Play Detail**: Detailed view for each play with diagrams, rules, personal notes, and an embedded PDF viewer.
+- **Theme Toggle**: Switch between light and dark modes for comfortable viewing.
+- **Responsive UI**: Fully responsive grid layouts, animated navigation, and clean styling.
 
-### `npm start`
+## Getting Started
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+These instructions will help you set up and run the project locally.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Prerequisites
 
-### `npm test`
+- Node.js (v14+ recommended)
+- npm or yarn
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Installation
 
-### `npm run build`
+```bash
+# Clone the repository
+git clone <your-repo-url>
+cd coach-hub
+# Install dependencies
+npm install
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Development
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+# Start the development server
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Open [http://localhost:3000](http://localhost:3000) to view in your browser. The app reloads on code changes.
 
-### `npm run eject`
+### Production Build
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm run build
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Creates an optimized production build in the `build` folder. Deploy the contents of `build` to your hosting service (e.g., Netlify).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Project Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```
+src/
+  components/    # Reusable UI components (RunPlays, Header, Standards, etc.)
+  App.js         # Main application entry with route definitions
+  index.js       # App bootstrap and ReactDOM render
+  styles/        # Global and component styles
+public/          # Static assets and entry HTML
+```
 
-## Learn More
+## Customization
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Add New Play**: Use the “Add New Play” form on the Playbook tab to insert custom plays.
+- **Standards**: Edit `src/components/Standards.js` to update team rules.
+- **Film Study**: Replace or add YouTube URLs in `src/components/RecentPlays.js`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment
 
-### Code Splitting
+This project includes a `netlify.toml` configuration for Netlify:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```toml
+[build]
+  command = "npm run build"
+  publish = "build"
+```
 
-### Analyzing the Bundle Size
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is open source. Feel free to customize and extend!
