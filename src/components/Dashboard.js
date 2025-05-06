@@ -13,12 +13,17 @@ function Dashboard() {
         <div className="card" onClick={() => navigate('/playbook')}>
           <h3>Run Plays</h3>
           <p>Power, zone, and counter run plays</p>
-          <span>15 plays</span>
+        </div>
+        <div className="logo-card">
+          <img
+            src="/FrontPageLogo.jpg"
+            alt="Gridiron Logo"
+            className="frontpage-logo"
+          />
         </div>
         <div className="card" onClick={() => navigate('/pass-protection')}>
           <h3>Pass Protection</h3>
           <p>Protection schemes for passing plays</p>
-          <span>12 plays</span>
         </div>
       </div>
       <Quiz />

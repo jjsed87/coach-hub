@@ -42,3 +42,17 @@
   font-size: 0.9rem;
   color: #777;
 }
+
+/* Logo card styling */
+.logo-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  max-width: 300px;
+}
+
+.frontpage-logo {
+  max-width: 100%;
+  height: auto;
+}
