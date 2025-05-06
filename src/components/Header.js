@@ -19,7 +19,6 @@ function Header() {
         <NavLink to="/recent-plays" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Film</NavLink>
         <NavLink to="/standards" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Standards</NavLink>
         <NavLink to="/formations" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Formations</NavLink>
-        <NavLink to="/notes" className={({isActive}) => isActive ? 'nav-link active' : 'nav-link'}>Notes</NavLink>
       </nav>
       <div className="header-actions">
         <button className="theme-toggle" onClick={() => setDarkMode(!darkMode)}>

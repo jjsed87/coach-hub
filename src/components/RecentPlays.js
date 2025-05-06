@@ -5,7 +5,7 @@ function RecentPlays() {
   const videos = [
     { title: 'Zone Blocking Execution', url: 'https://www.youtube.com/embed/zThTRYz5jXI' },
     { title: 'Pass Protection Techniques', url: 'https://www.youtube.com/embed/NnRR6K-xt9k' },
-    { title: 'Run Play Strategies', url: 'https://www.youtube.com/embed/jbpw_nIr6KU' },
+    { title: 'Run Play Strategies', url: 'https://www.youtube.com/embed/xEHOzYSF7a4' },
   ];
 
   // Added a motivational pop-up for non-negotiables
